@@ -9,8 +9,6 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.out",
-                "&&",
                 "${fileDirname}/${fileBasenameNoExtension}.out"
             ],
             "options": {

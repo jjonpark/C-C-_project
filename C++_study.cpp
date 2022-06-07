@@ -157,19 +157,37 @@
 //     }
 // }
 
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <time.h>
+// int main(void)
+// {
+//     srand(time(NULL));
+//     int i = rand() % 3; // 0~2 사이의 값을 반환
+//     switch (i)
+//     {
+//     case 0: printf("가위\n"); break;
+//     case 1: printf("바위\n"); break;
+//     case 2: printf("보\n"); break;
+//     default: printf("몰라요\n"); break;
+//     }
+// }
+
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+//선언
+void p(int num);
 int main(void)
 {
-    srand(time(NULL));
-    int i = rand() % 3; // 0~2 사이의 값을 반환
-    switch (i)
-    {
-    case 0: printf("가위\n"); break;
-    case 1: printf("바위\n"); break;
-    case 2: printf("보\n"); break;
-    default: printf("몰라요\n"); break;
-    }
-
+    int num =2;
+    p(num);
+    //2+3은?
+    num = num+3;
+    p(num);
+    
+    // 이러한 계산들을 함수를 통해서 관리해보자
+}
+void p(int num)
+{
+    printf("num은 %d입니다.\n", num);
+    
 }

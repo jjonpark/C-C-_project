@@ -173,21 +173,126 @@
 //     }
 // }
 
+// #include <stdio.h>
+// //선언
+// void p(int num);
+// int function_with_return();
+// int apple(int total, int ate);
+// int main(void)
+// {
+//     int num = 2;
+//     p(num);
+//     // 2+3은?
+//     num = num + 3;
+//     p(num);
+
+//     // 이러한 계산들을 함수를 통해서 관리해보자
+
+//     int ret = function_with_return();
+//     p(ret);
+
+//     // 파라미터(전달값)도 받고, 반환값이 있는 함수
+//     int rete = apple(5,2); //개의 사과중 2개를 먹었어요
+//     printf("사과 5개중에 2개를 먹으면? %d 가 남아요 ",rete);
+// }
+// void p(int num)
+// {
+//     printf("num은 %d입니다.\n", num);
+// }
+
+// int plus_4(int num2)
+// {
+//     return num2 + 4;
+// }
+
+// int function_with_return()
+// {
+//     printf("반환값이 있는 함수 입니다. \n");
+//     return 10;
+// }
+
+// int apple(int total, int apple)
+// {
+//     printf("전달값과 반환값이 있는 함수 입니다. \n");
+//     return total - apple;
+// }
+// #include <stdlib.h>
+// #include <stdio.h>
+// #include <time.h>
+
+// int getRandomNumber(int level);
+// void showQuestion(int level, int num1, int num2);
+// void success();
+// void fail();
+// int main(void)
+// {
+//     // 문이 5개가 있고, 각 문마다 점점 어려운 수식 퀴즈가 출제
+//     // 문제를 맞히면 통과, 틀리면 실패
+//     srand(time(NULL));
+//     int count = 0;
+//     for (int i=1 ; i<=5; i++)
+//     {
+//         int num1 = getRandomNumber(i);
+//         int num2 = getRandomNumber(i);
+//         showQuestion(i, num1, num2);
+//         int answer=-1;
+//         scanf("%d",&answer);
+//         if ( answer == -1)
+//         {
+//             printf("프로그램을 종료합니다.");
+//             exit(0);
+//         }
+//         else if (answer == num1 *num2 )
+//         {
+//             success();
+//             count++;
+//         }
+//         else
+//         {
+//             fail();
+//         }
+//     }
+//     printf("\n\n 당신은 5개의 문제중 %d 의 문제를 맞췄습니다.\n ", count);
+//     return 0;
+// }
+// int getRandomNumber(int level)
+// {
+//     return rand() % (level *7) +1;
+
+// }
+// void showQuestion(int level, int num1, int num2)
+// {
+//     printf("\n\n\n######## %d 번째 비밀번호 ########\n", level);
+//     printf("\n\t%d x %d 는? \n\n", num1, num2);
+//     printf("#####################################\n");
+//     printf("\n 비밀번호를 입력하세요 (종료 :-1) >>");
+// }
+
+// void success()
+// {
+//     printf("맞췄습니다!!\n");
+// }
+// void fail()
+// {
+//     printf("틀렸습니다!\n");
+// }
+
+
+// 배열
+
 #include <stdio.h>
-//선언
-void p(int num);
+
 int main(void)
 {
-    int num =2;
-    p(num);
-    //2+3은?
-    num = num+3;
-    p(num);
-    
-    // 이러한 계산들을 함수를 통해서 관리해보자
-}
-void p(int num)
-{
-    printf("num은 %d입니다.\n", num);
-    
+    //여러개의 변수를 함께, 동시에 생성
+    int subway_array[3];
+    subway_array[0]=30;
+    subway_array[1]=40;
+    subway_array[2]=50;
+
+    for (int i = 0; i<3; i++)
+    {
+        printf("지하철 %d호차에 %d 명이 타고 있습니다. \n",i+1, subway_array[i]);
+    }
+
 }
